@@ -28,10 +28,18 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl mb-4">Lista de Tareas</h1>
-      <AddTask addTask={addTask} />
-      <TaskList tasks={tasks} toggleTask={toggleTask} deleteTask={deleteTask} />
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+      <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+        <h1 className="text-2xl font-bold text-center text-gray-800 mb-4">
+          Lista de Tareas
+        </h1>
+        <AddTask addTask={addTask} />
+        <TaskList
+          tasks={tasks}
+          toggleTask={toggleTask}
+          deleteTask={deleteTask}
+        />
+      </div>
     </div>
   );
 };
