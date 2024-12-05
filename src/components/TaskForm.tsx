@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTask } from "../context/TaskContext";
 
-const AddTask: React.FC = () => {
-  const { addTask } = useTask(); // Usamos el hook personalizado
-  const [taskName, setTaskName] = useState<string>("");
+const TaskForm: React.FC = () => {
+  const { addTask } = useTask();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const taskName = formData.get("taskName") as string;
     if (taskName.trim()) {
       addTask(taskName);
-      setTaskName(""); // Limpiamos el input tras agregar la tarea
+      event.currentTarget.reset();
     }
   };
 
@@ -17,8 +18,7 @@ const AddTask: React.FC = () => {
     <form onSubmit={handleSubmit} className="flex items-center space-x-2 mb-4">
       <input
         type="text"
-        value={taskName}
-        onChange={(e) => setTaskName(e.target.value)}
+        name="taskName"
         placeholder="Add a new task"
         className="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400"
       />
@@ -32,4 +32,4 @@ const AddTask: React.FC = () => {
   );
 };
 
-export default AddTask;
+export default TaskForm;

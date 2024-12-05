@@ -1,46 +1,91 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📝 To-Do List Application
 
-## Available Scripts
+¡Bienvenido a mi proyecto **To-Do List**! Este es un proyecto de gestión de tareas desarrollado con las mejores prácticas de **Clean Code** y herramientas modernas de desarrollo frontend. 🚀
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Características principales
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Gestión de Tareas:** Añade, elimina y organiza tareas de forma eficiente.
+- **Diseño Responsivo:** Una interfaz moderna y atractiva diseñada con Tailwind CSS.
+- **Context API:** Manejo del estado global utilizando React Context API y hooks personalizados.
+- **TypeScript:** Código robusto y tipado estático para evitar errores en tiempo de ejecución.
+- **Next.js:** Implementación de Server-Side Rendering (SSR) y Static Site Generation (SSG) para un mejor rendimiento.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 📂 Estructura del Proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+├── components/      # Componentes reutilizables como TaskList, TaskForm y AddTask
+├── context/         # Implementación del contexto global para gestionar tareas
+├── pages/           # Páginas principales de la aplicación (HomePage, AboutPage)
+├── styles/          # Archivos CSS, incluyendo la configuración de Tailwind
+├── types/           # Definición de tipos con TypeScript
+└── utils/           # Funciones utilitarias para la aplicación
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Tecnologías utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Framework:** Next.js (React.js)
+- **Lenguaje:** TypeScript
+- **Estilización:** Tailwind CSS
+- **Gestión de Estado:** Context API y React Hooks
+- **Herramientas de Desarrollo:** ESLint, Prettier
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Instalación y Ejecución Local
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clona el repositorio:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   git clone https://github.com/tu-usuario/todo-app.git
+   cd todo-app
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Instala las dependencias:
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Ejecuta la aplicación en modo desarrollo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm run dev
+   ```
+
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+---
+
+## 🌐 Despliegue
+
+El proyecto está desplegado en [Vercel/Netlify/otra plataforma].  
+Visítalo aquí: [**Enlace a la aplicación**](#)
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT. Puedes usarlo y modificarlo según tus necesidades. Consulta el archivo `LICENSE` para más detalles.
+
+---
+
+## 📢 Contacto
+
+Si tienes comentarios, preguntas o sugerencias, no dudes en contactarme:
+
+- **LinkedIn:** [Juan Gabriel](https://linkedin.com/in/tu-perfil)
+- **Email:** juangabriel@example.com
+
+---
+
+¡Gracias por visitar mi proyecto! Espero que lo disfrutes y aprendas algo nuevo con él. 😊

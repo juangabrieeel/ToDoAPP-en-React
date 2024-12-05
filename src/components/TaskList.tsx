@@ -1,42 +1,22 @@
 import React from "react";
+import { useTask } from "../context/TaskContext";
 
-interface Task {
-  id: number;
-  text: string;
-  completed: boolean;
-}
+const TaskList: React.FC = () => {
+  const { tasks, removeTask } = useTask();
 
-interface TaskListProps {
-  tasks: Task[];
-  toggleTask: (id: number) => void;
-  deleteTask: (id: number) => void;
-}
-
-const TaskList: React.FC<TaskListProps> = ({
-  tasks,
-  toggleTask,
-  deleteTask,
-}) => {
   return (
-    <ul className="space-y-2 mt-4">
+    <ul className="space-y-2">
       {tasks.map((task) => (
         <li
           key={task.id}
-          className="flex justify-between items-center bg-gray-100 rounded-lg p-2 shadow-sm"
+          className="bg-white p-4 rounded-md shadow flex justify-between items-center"
         >
-          <span
-            className={`cursor-pointer text-gray-800 ${
-              task.completed ? "line-through text-gray-500" : ""
-            }`}
-            onClick={() => toggleTask(task.id)}
-          >
-            {task.text}
-          </span>
+          <span className="text-gray-700">{task.name}</span>
           <button
-            onClick={() => deleteTask(task.id)}
-            className="text-red-500 hover:text-red-700"
+            onClick={() => removeTask(task.id)}
+            className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
           >
-            ❌
+            Delete
           </button>
         </li>
       ))}
